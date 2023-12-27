@@ -4,17 +4,42 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+const description: string = "Joe McAlister is an award winning artist, skilled academic and trusted senior engineer. Described as 'relentlessly innovative' by the New York Times.";
+const url: string = "https://joe.work/";
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content={description}>
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+
+		<!-- Icons -->
+		<link rel="apple-touch-icon" sizes="180x180" href="https://cdn1.joe.ac/favicons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="https://cdn1.joe.ac/favicons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="https://cdn1.joe.ac/favicons/favicon-16x16.png">
+		<link rel="manifest" href="https://cdn1.joe.ac/favicons/site.webmanifest">
+		<link rel="mask-icon" href="https://cdn1.joe.ac/favicons/safari-pinned-tab.svg" color="#333333">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="theme-color" content="#ffffff">
+
+		<!-- Facebook -->
+		<meta property="og:type" content="website">
+		<meta property="og:title" content={title}>
+		<meta property="og:description" content={description}>
+		<meta property="og:url" content={url}>
+		<meta property="og:site_name" content={title}>
+
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:title" content={title}>
+		<meta name="twitter:description" content={description}>
+		<meta name="twitter:url" content={url}>
 
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

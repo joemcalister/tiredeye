@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageSection from "../components/PageSection.astro";
+import ExperienceSection from "../components/ExperienceSection.astro";
+---
+
+<Layout title="Joe McAlister - Page not found.">
+	<main>
+		<h1>Page not found</h1>
+		<p>Sorry, that page does not exist.</p>
+		<p>Psst... If you are looking for an artwork related page it may now be in my archived work
+			at <a href="https://archive.joemcalister.com/">https://archive.joemcalister.com/</a>.</p>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: var(--spacer-2xl) auto;
+		width: 100%;
+		max-width: 840px;
+		line-height: 1.6;
+		padding: 0 var(--spacer-l);
+		box-sizing: border-box;
+	}
+</style>

@@ -2,17 +2,25 @@
 import Layout from '../layouts/Layout.astro';
 import PageSection from "../components/PageSection.astro";
 import ExperienceSection from "../components/ExperienceSection.astro";
+import Logo from "../components/Logo.astro";
 ---
 
 <Layout title="Joe McAlister - Award winning Artist, Senior Engineer.">
 	<main>
 		<div class="page-grid">
-			<img src="./logo.png" alt="" class="logo"/>
+			<Logo />
 			<div>
 				<h1>Joe McAlister</h1>
 				<p>Award winning artist, skilled academic and trusted senior engineer.
 					<br />Described as "relentlessly innovative" by the New York Times.</p>
 				<div class="further-info">
+					<div class="info-pip">
+						<a href="https://www.linkedin.com/in/joe-mcalister-8ba93b14b/" target="_blank">
+							<span class="material-symbols-outlined">
+								share
+							</span>
+						</a>
+					</div>
 					<div class="info-pip">
 						<span class="material-symbols-outlined">
 							location_on
@@ -24,7 +32,8 @@ import ExperienceSection from "../components/ExperienceSection.astro";
 				<div class="sections">
 					<PageSection title="About">
 						<p>
-							Over the last five years, I've been creating artwork as Fast Familiar, supported by major
+							Over the last five years, I've been creating artwork as
+							<a href="https://fastfamiliar.com/" target="_blank">Fast Familiar</a>, supported by major
 							institutions like Arts Council England, the European Commission, The Cabinet Office and more.
 							Our work has graced prestigious venues including a 6-month exhibition at London's Science
 							Gallery. At Fast Familiar, I've held roles from engineering director to CTO.
@@ -36,8 +45,9 @@ import ExperienceSection from "../components/ExperienceSection.astro";
 							globally.
 						</p>
 						<p>
-							Currently, I'm a senior engineer at iwoca, contributing to the groundbreaking iwocaPay in a
-							hand-picked, powerhouse team. We're reshaping the landscape of B2B finance.
+							Currently, I'm a senior engineer at <a href="https://iwoca.co.uk/" target="_blank">iwoca</a>,
+							contributing to the groundbreaking iwocaPay in a hand-picked, powerhouse team. We're
+							reshaping the landscape of B2B finance.
 						</p>
 					</PageSection>
 					<PageSection title="Experience">
@@ -110,12 +120,9 @@ import ExperienceSection from "../components/ExperienceSection.astro";
 		grid-template-columns: auto 1fr;
 		gap: var(--spacer-xl);
 	}
-	.logo {
-		width: 60px;
-		height: auto;
-	}
 	.further-info {
 		display: flex;
+		align-items: baseline;
 	}
 	.info-pip {
 		display: flex;

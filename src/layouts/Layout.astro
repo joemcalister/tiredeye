@@ -55,6 +55,7 @@ const url: string = "https://joe.work/";
 		--bg-color: #fff;
 		--text-color: #000;
 		--highlight-color: #dfe6e9;
+		--link-color: #0052ff;
 
 		--border-radius-s: 3px;
 
@@ -63,6 +64,14 @@ const url: string = "https://joe.work/";
 		--spacer-l: 20px;
 		--spacer-xl: 30px;
 		--spacer-2xl: 60px;
+	}
+	@media (prefers-color-scheme: dark) {
+		:root {
+			--bg-color: #131313;
+			--text-color: #fff;
+			--highlight-color: #333;
+			--link-color: #216aff;
+		}
 	}
 	html {
 		font-family:
@@ -93,5 +102,12 @@ const url: string = "https://joe.work/";
 	p {
 		margin: 0;
 		padding: var(--spacer-s) 0;
+	}
+	a, a:visited {
+		color: var(--text-color);
+		transition: 0.3s;
+	}
+	a:hover {
+		color: var(--link-color);
 	}
 </style>

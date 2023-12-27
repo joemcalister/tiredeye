@@ -1,0 +1,45 @@
+---
+interface Props {
+	title: string;
+}
+
+const { company, job, description, start, end } = Astro.props;
+---
+
+<div class="experience-section">
+	<div>
+		<h3>{company} <span class="job-pip">{job}</span></h3>
+		<div>{description}</div>
+	</div>
+	<div class="start-end-column">
+		<span>{start}</span>
+		<span class="hyphen">-</span>
+		<span>{end}</span>
+	</div>
+</div>
+
+<style>
+	.experience-section {
+		display: grid;
+		grid-template-columns: 1fr 90px;
+		gap: var(--spacer-l);
+	}
+	h3 {
+		font-size: 100%;
+		font-weight: bold;
+		margin: 0;
+		padding: 0;
+	}
+	.job-pip {
+		background-color: var(--highlight-color);
+		padding: 0 var(--spacer-s);
+		border-radius: var(--border-radius-s);
+	}
+	.start-end-column {
+		display: grid;
+		grid-template-columns: min-content 1fr min-content;
+	}
+	.hyphen {
+		text-align: center;
+	}
+</style>

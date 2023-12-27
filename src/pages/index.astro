@@ -1,0 +1,163 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageSection from "../components/PageSection.astro";
+import ExperienceSection from "../components/ExperienceSection.astro";
+---
+
+<Layout title="Joe McAlister - Award winning Artist, Senior Engineer.">
+	<main>
+		<div class="page-grid">
+			<img src="./logo.png" alt="" class="logo"/>
+			<div>
+				<h1>Joe McAlister</h1>
+				<p>Award winning artist, skilled academic and trusted senior engineer.
+					<br />Described as "relentlessly innovative" by the New York Times.</p>
+				<div class="further-info">
+					<div class="info-pip">
+						<span class="material-symbols-outlined">
+							location_on
+						</span>
+						<p>London, UK</p>
+					</div>
+				</div>
+
+				<div class="sections">
+					<PageSection title="About">
+						<p>
+							Over the last five years, I've been creating artwork as Fast Familiar, supported by major
+							institutions like Arts Council England, the European Commission, The Cabinet Office and more.
+							Our work has graced prestigious venues including a 6-month exhibition at London's Science
+							Gallery. At Fast Familiar, I've held roles from engineering director to CTO.
+						</p>
+						<p>
+							In my academic tenure at Goldsmiths, University of London, I wrote and oversaw modules in
+							MFA Computational Art and multiple Computer Science programs. Notably, I designed the Mobile
+							Development module for University of London Worldwide, taken by thousands of students
+							globally.
+						</p>
+						<p>
+							Currently, I'm a senior engineer at iwoca, contributing to the groundbreaking iwocaPay in a
+							hand-picked, powerhouse team. We're reshaping the landscape of B2B finance.
+						</p>
+					</PageSection>
+					<PageSection title="Experience">
+						<div class="experience-section">
+							<ExperienceSection
+								job="Senior Fullstack Engineer"
+								company="iwoca"
+								start="2022"
+								end="now"
+								description="Working within iwocaPay. Led critical projects including multi-user access, 2-factor authentication, pricing, flexible-payout."
+							/>
+							<ExperienceSection
+								job="CTO"
+								company="Fast Familiar"
+								start="2017"
+								end="now"
+								description="Creating award-winning artwork funded by world-leading companies."
+							/>
+							<ExperienceSection
+								job="Lecturer"
+								company="Goldsmiths, UoL"
+								start="2019"
+								end="2022"
+								description="Lecturer across the Master's and Bachelor's computer science degrees."
+							/>
+							<ExperienceSection
+								job="Lecturer"
+								company="University of London Worldwide"
+								start="2020"
+								end="2022"
+								description="Course creator, maintainer of three core modules."
+							/>
+						</div>
+					</PageSection>
+					<PageSection title="Skills">
+						<p>With over a decade of full-stack programming expertise, I specialize in crafting robust and
+							dependable architectures. I can also run marathons in an <i>okay</i> time.</p>
+						<ul class="skills-list">
+							{[
+								"Typescript",
+								"NodeJS",
+								"Python",
+								"Objective-C",
+								"Swift",
+								"Kubernetes",
+								"Docker",
+								"Cypress",
+							].map((item: string) => (
+								<li>{item}</li>
+							))}
+						</ul>
+					</PageSection>
+				</div>
+			</div>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: var(--spacer-2xl) auto;
+		width: 100%;
+		max-width: 840px;
+		line-height: 1.6;
+		padding: 0 var(--spacer-l);
+		box-sizing: border-box;
+	}
+	.page-grid {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		gap: var(--spacer-xl);
+	}
+	.logo {
+		width: 60px;
+		height: auto;
+	}
+	h1 {
+		font-size: 100%;
+		font-weight: bold;
+		margin: 0;
+		padding: 0;
+	}
+	h2 {
+		font-size: 110%;
+	}
+	p {
+		margin: 0;
+		padding: var(--spacer-s) 0;
+	}
+	.further-info {
+		display: flex;
+	}
+	.info-pip {
+		display: flex;
+		font-size: 80%;
+		align-items: center;
+		gap: var(--spacer-s);
+	}
+	.sections {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: var(--spacer-l);
+		margin: var(--spacer-xl) 0 0 0;
+	}
+	.experience-section {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: var(--spacer-m);
+	}
+	.skills-list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		gap: var(--spacer-m);
+		flex-wrap: wrap;
+	}
+	.skills-list li {
+		background-color: var(--highlight-color);
+		padding: 0 var(--spacer-s);
+		border-radius: var(--border-radius-s);
+	}
+</style>

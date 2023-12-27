@@ -23,3 +23,19 @@ import ExperienceSection from "../components/ExperienceSection.astro";
 		box-sizing: border-box;
 	}
 </style>
+<script>
+	const path = window.location.pathname;
+	const potentialArchivePath = `https://archive.joemcalister.com${path}`
+	fetch(potentialArchivePath, {
+		method: 'GET',
+		mode: 'cors',
+	})
+		.then((res) => {
+			if (!res.ok) throw new Error("Not found");
+
+			// If the response is ok, redirect to the archive page
+			window.location.replace(potentialArchivePath);
+		})
+		.then((data) => console.log(data))
+		.catch((err) => console.log(err))
+</script>

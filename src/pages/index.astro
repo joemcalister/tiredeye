@@ -120,6 +120,11 @@ import Logo from "../components/Logo.astro";
 		grid-template-columns: auto 1fr;
 		gap: var(--spacer-xl);
 	}
+	@media (max-width: 600px) {
+		.page-grid {
+			grid-template-columns: 1fr;
+		}
+	}
 	.further-info {
 		display: flex;
 		align-items: baseline;

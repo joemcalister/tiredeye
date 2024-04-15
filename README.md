@@ -1,4 +1,4 @@
-# Astro Starter Kit: Basics
+# Tired Eye
 
 ```sh
 npm create astro@latest -- --template basics
